@@ -1,0 +1,140 @@
+$color: green;
+$spacing: 24px;
+
+body {
+    font-smoothing: antialiased;
+    animation: body 1s 20s linear infinite;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.center {
+    text-align: center;
+}
+
+.stations {
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    bottom: $spacing;
+    left: 60%;
+
+    &__item {
+        font-size: 50px;
+        border-bottom: 1px solid black;
+        transition: .3s ease;
+        margin-bottom: $spacing;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            color: red;
+            border-color: red;
+            cursor: pointer;
+        }
+    }
+}
+
+.current-track {
+    width: 30%;
+    margin: 0 auto;
+    height: $spacing;
+    overflow: hidden;
+
+    &__content {
+        display: flex;
+        animation: move 10s linear infinite;
+    }
+
+    p {
+        margin: 0;
+
+    }
+
+    img {
+        max-height: $spacing;
+        margin-right: $spacing/2;
+    }
+}
+
+.display {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    &__item {
+        flex-basis: 50%;
+        display: flex;
+    }
+
+    h1 {
+        font-size: 160px;
+        text-align: right;
+    }
+
+    img {
+        align-self: center;
+        margin: 0 auto;
+        animation: image 10s 20s steps(20) infinite;
+        // margin: 0 auto;
+        // max-width: 80%;
+        // max-height: 800px;
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+// @keyframes image {
+//     0% {
+//         filter: invert(.8);
+//     }
+//     49% {
+//         filter: invert(.8);
+//     }
+//     50% {
+//         filter: invert(0);
+//     }
+//     100% {
+//         filter: invert(0);
+//     }
+// }
+
+@keyframes image {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(2160deg);
+    }
+}
+
+@keyframes body {
+    0% {
+        background: white;
+        color: black;
+    }
+    49% {
+        background: white;
+        color: black;
+    }
+    50% {
+        background: black;
+        color: white;
+    }
+    100% {
+        background: black;
+        color: white;
+    }
+}
