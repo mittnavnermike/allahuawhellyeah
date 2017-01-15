@@ -7,7 +7,11 @@
   },
   "dependencies": {
     "auto-bind": "^0.1.0",
+    "basic-auth": "^1.1.0",
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
     "deep-freeze-es6": "^1.0.1",
+    "express": "^4.14.0",
     "lodash": "^4.17.4",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
@@ -15,6 +19,7 @@
     "react-router": "^3.0.0",
     "react-router-redux": "^4.0.7",
     "redux": "^3.6.0",
+    "request": "^2.79.0",
     "styled-components": "^1.2.1"
   },
   "scripts": {
