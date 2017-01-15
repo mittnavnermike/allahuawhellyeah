@@ -10,9 +10,8 @@ const Home = () => (
                 width:'64px',
                 height:'22px',
             }}
-            autoPlay="true"
             scrolling="no"
-            ></iframe>
+        />
         <audio
             controls
             autoPlay
